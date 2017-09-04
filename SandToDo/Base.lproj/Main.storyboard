@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="mel-t4-VJD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="lJF-eI-pkq">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--To Do Lists-->
+        <!--Lists-->
         <scene sceneID="jrJ-U0-xzw">
             <objects>
-                <tableViewController id="Kph-PZ-YL3" sceneMemberID="viewController">
+                <tableViewController id="Kph-PZ-YL3" customClass="ListsTableViewController" customModule="SandToDo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Gml-er-lAA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,7 +23,9 @@
                             <outlet property="delegate" destination="Kph-PZ-YL3" id="4s2-hQ-v70"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="To Do Lists" id="SoN-NK-sfM"/>
+                    <navigationItem key="navigationItem" title="Lists" id="SoN-NK-sfM">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="cDy-oA-t06"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5KZ-HU-bfG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -45,6 +48,77 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NCy-QR-ixe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="200.80000000000001" y="108.39580209895054"/>
+        </scene>
+        <!--Todo List-->
+        <scene sceneID="ocv-ja-tUJ">
+            <objects>
+                <viewController id="cOB-sF-Syw" customClass="TodoListViewController" customModule="SandToDo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Glf-er-2vb"/>
+                        <viewControllerLayoutGuide type="bottom" id="UEn-ye-91u"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="F1L-rL-Bi0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zBI-2W-bpu">
+                                <rect key="frame" x="329" y="72" width="30" height="30"/>
+                                <state key="normal" title="➕"/>
+                                <connections>
+                                    <action selector="addButtonPressed:" destination="cOB-sF-Syw" eventType="touchUpInside" id="Tip-6a-wWg"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nvD-Gv-XBs">
+                                <rect key="frame" x="0.0" y="110" width="375" height="557"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add new sand to do" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MmU-7h-Lg0">
+                                <rect key="frame" x="16" y="72" width="289" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zBI-2W-bpu" firstAttribute="leading" secondItem="MmU-7h-Lg0" secondAttribute="trailing" constant="24" id="2ET-gK-Jqi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zBI-2W-bpu" secondAttribute="trailing" id="67e-jW-t0a"/>
+                            <constraint firstItem="zBI-2W-bpu" firstAttribute="top" secondItem="Glf-er-2vb" secondAttribute="bottom" constant="8" id="QdC-zK-1iy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MmU-7h-Lg0" secondAttribute="trailing" constant="54" id="Yg6-So-Ohw"/>
+                            <constraint firstItem="MmU-7h-Lg0" firstAttribute="top" secondItem="zBI-2W-bpu" secondAttribute="top" id="inb-1P-m9d"/>
+                            <constraint firstItem="MmU-7h-Lg0" firstAttribute="leading" secondItem="F1L-rL-Bi0" secondAttribute="leadingMargin" id="x9M-dy-PZ5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Todo List" id="g4s-mv-1kl">
+                        <barButtonItem key="leftBarButtonItem" systemItem="bookmarks" id="FP5-rH-cFu"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="L63-Nt-T8D"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addNewTextFiled" destination="MmU-7h-Lg0" id="ESO-cC-bj5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ujr-mU-LA1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1140" y="839.73013493253382"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nCs-j2-z2J">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lJF-eI-pkq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5d5-om-lg0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cOB-sF-Syw" kind="relationship" relationship="rootViewController" id="grl-Wt-FXI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R0O-aw-oga" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="201" y="840"/>
         </scene>
     </scenes>
 </document>
