@@ -1,5 +1,5 @@
 //
-//  TodoListViewController.swift
+//  NewTodoListViewController.swift
 //  SandToDo
 //
 //  Created by Tomek Buslowski on 04.09.2017.
@@ -8,11 +8,17 @@
 
 import UIKit
 
-class TodoListViewController: UIViewController {
-    
-    var todos = [Todo]()
+class NewTodoListViewController: UIViewController {
 
-    @IBOutlet weak var addNewTextFiled: UITextField!
+    @IBOutlet weak var nameTextField: UITextField! {
+        didSet {
+            saveBarButton?.isEnabled = true
+        }
+    }
+    @IBOutlet weak var backgroundColorSlider: UISlider!
+    
+    @IBOutlet weak var saveBarButton: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,10 +40,16 @@ class TodoListViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    @IBAction func sliderChanged(_ sender: Any) {
+        let slider = sender as! UISlider
+        let value = slider.value
+        let ratio = 2 * value
+        let b = max(0, 255*(1 - ratio))
+        let r = max(0, 255*(ratio - 1))
+        let g = 255 - b - r
+        
+        let color = UIColor.init(colorLiteralRed: r, green: g, blue: b, alpha: 0.8)
+        view.backgroundColor = color
+    }
 
-    @IBAction func addButtonPressed(_ sender: UIButton) {
-    }
-    
-    @IBAction func trashButtonPressed(_ sender: UIBarButtonItem) {
-    }
 }
