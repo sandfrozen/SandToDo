@@ -10,11 +10,8 @@ import UIKit
 
 class NewTodoListViewController: UIViewController {
 
-    @IBOutlet weak var nameTextField: UITextField! {
-        didSet {
-            saveBarButton?.isEnabled = true
-        }
-    }
+    @IBOutlet weak var nameTextField: UITextField!
+    
     @IBOutlet weak var backgroundColorSlider: UISlider!
     
     @IBOutlet weak var saveBarButton: UIBarButtonItem!
@@ -40,16 +37,32 @@ class NewTodoListViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
     @IBAction func sliderChanged(_ sender: Any) {
         let slider = sender as! UISlider
         let value = slider.value
-        let ratio = 2 * value
-        let b = max(0, 255*(1 - ratio))
-        let r = max(0, 255*(ratio - 1))
-        let g = 255 - b - r
+        let r: CGFloat
+        let g: CGFloat
+        let b: CGFloat
         
-        let color = UIColor.init(colorLiteralRed: r, green: g, blue: b, alpha: 0.8)
-        view.backgroundColor = color
+        switch value {
+        case 100000...130000:
+            r = CGFloat(Int(value / 10000)) / 100
+            g = CGFloat(Int(value / 100) - Int(r * 10000)) / 100
+            b = CGFloat(Int(value) - Int(value / 100) * 100) / 100
+        case 130001...160000:
+            g = CGFloat(Int(value / 10000)) / 100
+            b = CGFloat(Int(value / 100) - Int(g * 10000)) / 100
+            r = CGFloat(Int(value) - Int(value / 100) * 100) / 100
+        default:
+            b = CGFloat(Int(value / 10000)) / 100
+            r = CGFloat(Int(value / 100) - Int(b * 10000)) / 100
+            g = CGFloat(Int(value) - Int(value / 100) * 100) / 100
+        }
+        //print(value)
+        //print("\(r) \(g) \(b)")
+        backgroundColorSlider.thumbTintColor = UIColor(red: r, green: g, blue: b, alpha: 0.3)
+        //view.backgroundColor = UIColor(red: r, green: 100, blue: 100, alpha: 0.5)
     }
 
 }
