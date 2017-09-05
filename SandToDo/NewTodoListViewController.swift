@@ -9,19 +9,22 @@
 import UIKit
 
 class NewTodoListViewController: UIViewController {
-
+    
     @IBOutlet weak var nameTextField: UITextField!
     
     @IBOutlet weak var backgroundColorSlider: UISlider!
     
     @IBOutlet weak var saveBarButton: UIBarButtonItem!
     
-    @IBOutlet weak var colorView: UIView!
+    @IBOutlet weak var colorImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        colorImageView.layer.cornerRadius = colorImageView.frame.size.width/2
+        colorImageView.clipsToBounds = true
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,44 +52,44 @@ class NewTodoListViewController: UIViewController {
         
         switch Int(value) {
         case 1:
-            r = 0
-            g = 1
-            b = value - CGFloat(Int(value))
-        case 2:
-            r = 0
-            g = abs(CGFloat(Int(value)+1) - value)
-            b = 1
-        case 3:
-            r = 0
-            g = 0
-            b = abs(CGFloat(Int(value)+1) - value)
-        case 4:
             r = value - CGFloat(Int(value))
             g = 0
             b = 0
-        case 5:
+        case 2:
             r = 1
+            g = 0
+            b = value - CGFloat(Int(value))
+        case 3:
+            r = abs(CGFloat(Int(value)+1) - value)
+            g = 0
+            b = 1
+        case 4:
+            r = 0
             g = value - CGFloat(Int(value))
-            b = 0
+            b = 1
+        case 5:
+            r = 0
+            g = 1
+            b = abs(CGFloat(Int(value)+1) - value)
         case 6:
+            r = value - CGFloat(Int(value))
+            g = 1
+            b = 0
+        case 7:
             r = 1
             g = 1
             b = value - CGFloat(Int(value))
-        case 7:
-            r = 1
-            g = abs(CGFloat(Int(value)+1) - value)
-            b = 1
         default:
             r = 1
-            g = 0
+            g = 1
             b = 1
         }
         
-        //print(Int(value))
-        //print("\(r) \(g) \(b)")
+        colorImageView.backgroundColor = UIColor(red: r, green: g, blue: b, alpha: 1.0)
         
-        colorView.backgroundColor = UIColor(red: r, green: g, blue: b, alpha: 1.0)
-        //view.backgroundColor = UIColor(red: r, green: 100, blue: 100, alpha: 0.5)
+        //UIView.animate(withDuration: 1.0, animations: {
+        //    self.colorView.backgroundColor = UIColor(white: 1, alpha: 0)
+        //})
     }
 
 }
