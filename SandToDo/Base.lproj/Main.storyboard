@@ -90,13 +90,18 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="rPv-g2-SLd"/>
                                 </items>
                             </toolbar>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="101010" minValue="101010" maxValue="200000" translatesAutoresizingMaskIntoConstraints="NO" id="yei-KI-Tpl">
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="7" minValue="1" maxValue="8" translatesAutoresizingMaskIntoConstraints="NO" id="yei-KI-Tpl">
                                 <rect key="frame" x="14" y="175" width="347" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="sliderChanged:" destination="z7n-sM-qZl" eventType="valueChanged" id="jbH-Xc-Cyf"/>
                                 </connections>
                             </slider>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A1c-GH-O0d">
+                                <rect key="frame" x="164" y="141" width="195" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -105,6 +110,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="backgroundColorSlider" destination="yei-KI-Tpl" id="aGc-8L-K5A"/>
+                        <outlet property="colorView" destination="A1c-GH-O0d" id="GhI-0e-jPW"/>
                         <outlet property="nameTextField" destination="WIl-o8-BZO" id="rb7-jC-6rU"/>
                         <outlet property="saveBarButton" destination="W46-Vn-y0c" id="B7a-HP-KyA"/>
                     </connections>

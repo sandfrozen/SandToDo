@@ -16,6 +16,8 @@ class NewTodoListViewController: UIViewController {
     
     @IBOutlet weak var saveBarButton: UIBarButtonItem!
     
+    @IBOutlet weak var colorView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -40,28 +42,50 @@ class NewTodoListViewController: UIViewController {
     
     @IBAction func sliderChanged(_ sender: Any) {
         let slider = sender as! UISlider
-        let value = slider.value
+        let value = CGFloat(slider.value)
         let r: CGFloat
         let g: CGFloat
         let b: CGFloat
         
-        switch value {
-        case 100000...130000:
-            r = CGFloat(Int(value / 10000)) / 100
-            g = CGFloat(Int(value / 100) - Int(r * 10000)) / 100
-            b = CGFloat(Int(value) - Int(value / 100) * 100) / 100
-        case 130001...160000:
-            g = CGFloat(Int(value / 10000)) / 100
-            b = CGFloat(Int(value / 100) - Int(g * 10000)) / 100
-            r = CGFloat(Int(value) - Int(value / 100) * 100) / 100
+        switch Int(value) {
+        case 1:
+            r = 0
+            g = 1
+            b = value - CGFloat(Int(value))
+        case 2:
+            r = 0
+            g = abs(CGFloat(Int(value)+1) - value)
+            b = 1
+        case 3:
+            r = 0
+            g = 0
+            b = abs(CGFloat(Int(value)+1) - value)
+        case 4:
+            r = value - CGFloat(Int(value))
+            g = 0
+            b = 0
+        case 5:
+            r = 1
+            g = value - CGFloat(Int(value))
+            b = 0
+        case 6:
+            r = 1
+            g = 1
+            b = value - CGFloat(Int(value))
+        case 7:
+            r = 1
+            g = abs(CGFloat(Int(value)+1) - value)
+            b = 1
         default:
-            b = CGFloat(Int(value / 10000)) / 100
-            r = CGFloat(Int(value / 100) - Int(b * 10000)) / 100
-            g = CGFloat(Int(value) - Int(value / 100) * 100) / 100
+            r = 1
+            g = 0
+            b = 1
         }
-        //print(value)
+        
+        //print(Int(value))
         //print("\(r) \(g) \(b)")
-        backgroundColorSlider.thumbTintColor = UIColor(red: r, green: g, blue: b, alpha: 0.3)
+        
+        colorView.backgroundColor = UIColor(red: r, green: g, blue: b, alpha: 1.0)
         //view.backgroundColor = UIColor(red: r, green: 100, blue: 100, alpha: 0.5)
     }
 
