@@ -74,7 +74,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Backgorund color:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3OA-qp-dxt">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Background color:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3OA-qp-dxt">
                                 <rect key="frame" x="16" y="146" width="140" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -91,7 +91,9 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="fMT-45-Kur"/>
-                                    <barButtonItem systemItem="save" id="W46-Vn-y0c"/>
+                                    <barButtonItem title="Create" style="done" id="W46-Vn-y0c">
+                                        <color key="tintColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="rPv-g2-SLd"/>
                                 </items>
                             </toolbar>
@@ -101,7 +103,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="8" minValue="1" maxValue="8" translatesAutoresizingMaskIntoConstraints="NO" id="yei-KI-Tpl">
-                                <rect key="frame" x="40" y="228" width="295" height="31"/>
+                                <rect key="frame" x="37" y="185" width="301" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="minimumTrackTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="maximumTrackTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -119,6 +121,7 @@
                     <connections>
                         <outlet property="backgroundColorSlider" destination="yei-KI-Tpl" id="aGc-8L-K5A"/>
                         <outlet property="colorImageView" destination="iDO-2i-34I" id="CIz-cP-LhK"/>
+                        <outlet property="colorsPaletteImageView" destination="Ugg-Mg-kcc" id="LUI-I9-rlW"/>
                         <outlet property="nameTextField" destination="WIl-o8-BZO" id="rb7-jC-6rU"/>
                         <outlet property="saveBarButton" destination="W46-Vn-y0c" id="B7a-HP-KyA"/>
                     </connections>

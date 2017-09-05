@@ -18,13 +18,16 @@ class NewTodoListViewController: UIViewController {
     
     @IBOutlet weak var colorImageView: UIImageView!
     
+    @IBOutlet weak var colorsPaletteImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         colorImageView.layer.cornerRadius = colorImageView.frame.size.width/2
         colorImageView.clipsToBounds = true
         
-        
+        colorsPaletteImageView.layer.cornerRadius = colorImageView.frame.size.width/4
+        colorsPaletteImageView.clipsToBounds = true
     }
 
     override func didReceiveMemoryWarning() {
