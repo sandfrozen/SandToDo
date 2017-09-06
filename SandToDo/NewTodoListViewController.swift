@@ -8,24 +8,25 @@
 
 import UIKit
 
-class NewTodoListViewController: UIViewController {
+class NewTodoListViewController: UIViewController, UITextFieldDelegate {
     
+    // MARK: - Properties
     @IBOutlet weak var nameTextField: UITextField!
-    
     @IBOutlet weak var saveBarButton: UIBarButtonItem!
-    
     @IBOutlet weak var colorImageView: UIImageView!
-    
     @IBOutlet weak var colorsPaletteImageView: UIImageView!
+    @IBOutlet weak var colorsSlider: UISlider!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        // Handle the text field’s user input through delegate callbacks.
+        nameTextField.delegate = self
+        
         colorImageView.layer.cornerRadius = colorImageView.frame.size.width/2
         colorImageView.clipsToBounds = true
         
-        colorsPaletteImageView.layer.cornerRadius = colorImageView.frame.size.width/3.5
-        colorsPaletteImageView.clipsToBounds = true
+        colorsPaletteImageView.layer.cornerRadius = colorImageView.frame.size.width/6
+        //colorsPaletteImageView.clipsToBounds = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,6 +45,7 @@ class NewTodoListViewController: UIViewController {
     }
     */
     
+    // MARK: - Functions
     @IBAction func colorSliderChanged(_ sender: Any) {
         let slider = sender as! UISlider
         let value = CGFloat(slider.value)
@@ -85,13 +87,30 @@ class NewTodoListViewController: UIViewController {
             b = 0
             g = 0
         }
-        
+
         colorImageView.backgroundColor = UIColor(red: r, green: g, blue: b, alpha: 1.0)
-        self.colorImageView.alpha = 1.0
+//        self.colorImageView.alpha = 1.0
         
-        UIView.animate(withDuration: 1.0, animations: {
-            self.colorImageView.alpha = 0.0
-        })
+//        UIView.animate(withDuration: 1.0, animations: {
+//            self.colorImageView.alpha = 0.0
+//        })
+    }
+    
+    @IBAction func cancel(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
+    // MARK: - UITextFieldDelegate
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // Hide the keyboard
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        nameTextField.text = textField.text
+        if !(nameTextField.text?.isEmpty)! {
+            saveBarButton.isEnabled = true
+        }
     }
 
 }
