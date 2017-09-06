@@ -87,10 +87,11 @@ class NewTodoListViewController: UIViewController {
         }
         
         colorImageView.backgroundColor = UIColor(red: r, green: g, blue: b, alpha: 1.0)
+        self.colorImageView.alpha = 1.0
         
-        //UIView.animate(withDuration: 1.0, animations: {
-        //    self.colorView.backgroundColor = UIColor(white: 1, alpha: 0)
-        //})
+        UIView.animate(withDuration: 1.0, animations: {
+            self.colorImageView.alpha = 0.0
+        })
     }
 
 }
