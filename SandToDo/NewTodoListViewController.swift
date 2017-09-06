@@ -108,9 +108,6 @@ class NewTodoListViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         nameTextField.text = textField.text
-        if !(nameTextField.text?.isEmpty)! {
-            saveBarButton.isEnabled = true
-        }
     }
 
 }
