@@ -74,18 +74,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Background color:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3OA-qp-dxt">
-                                <rect key="frame" x="16" y="146" width="140" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Color:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3OA-qp-dxt">
+                                <rect key="frame" x="16" y="146" width="46" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="colorsLayer" translatesAutoresizingMaskIntoConstraints="NO" id="Ugg-Mg-kcc">
-                                <rect key="frame" x="42" y="192" width="291" height="17"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
-                            </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2nv-fy-ake">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -98,18 +93,23 @@
                                 </items>
                             </toolbar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iDO-2i-34I">
-                                <rect key="frame" x="175" y="144" width="25" height="25"/>
+                                <rect key="frame" x="75" y="144" width="25" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="8" minValue="1" maxValue="8" translatesAutoresizingMaskIntoConstraints="NO" id="yei-KI-Tpl">
-                                <rect key="frame" x="37" y="185" width="301" height="31"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rainbow" translatesAutoresizingMaskIntoConstraints="NO" id="Ugg-Mg-kcc">
+                                <rect key="frame" x="112" y="148" width="244" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="8" translatesAutoresizingMaskIntoConstraints="NO" id="yei-KI-Tpl">
+                                <rect key="frame" x="106" y="141" width="255" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="minimumTrackTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="maximumTrackTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="thumbTintColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="0.70063677226027399" colorSpace="calibratedRGB"/>
                                 <connections>
-                                    <action selector="sliderChanged:" destination="z7n-sM-qZl" eventType="valueChanged" id="jbH-Xc-Cyf"/>
+                                    <action selector="colorSliderChanged:" destination="z7n-sM-qZl" eventType="valueChanged" id="Wag-bC-AA0"/>
                                 </connections>
                             </slider>
                         </subviews>
@@ -119,7 +119,6 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="yW5-1a-Jjm"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="backgroundColorSlider" destination="yei-KI-Tpl" id="aGc-8L-K5A"/>
                         <outlet property="colorImageView" destination="iDO-2i-34I" id="CIz-cP-LhK"/>
                         <outlet property="colorsPaletteImageView" destination="Ugg-Mg-kcc" id="LUI-I9-rlW"/>
                         <outlet property="nameTextField" destination="WIl-o8-BZO" id="rb7-jC-6rU"/>
@@ -243,6 +242,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="colorsLayer" width="750" height="45"/>
+        <image name="rainbow" width="500" height="50"/>
     </resources>
 </document>

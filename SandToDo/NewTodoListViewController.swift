@@ -12,8 +12,6 @@ class NewTodoListViewController: UIViewController {
     
     @IBOutlet weak var nameTextField: UITextField!
     
-    @IBOutlet weak var backgroundColorSlider: UISlider!
-    
     @IBOutlet weak var saveBarButton: UIBarButtonItem!
     
     @IBOutlet weak var colorImageView: UIImageView!
@@ -26,7 +24,7 @@ class NewTodoListViewController: UIViewController {
         colorImageView.layer.cornerRadius = colorImageView.frame.size.width/2
         colorImageView.clipsToBounds = true
         
-        colorsPaletteImageView.layer.cornerRadius = colorImageView.frame.size.width/4
+        colorsPaletteImageView.layer.cornerRadius = colorImageView.frame.size.width/3.5
         colorsPaletteImageView.clipsToBounds = true
     }
 
@@ -46,7 +44,7 @@ class NewTodoListViewController: UIViewController {
     }
     */
     
-    @IBAction func sliderChanged(_ sender: Any) {
+    @IBAction func colorSliderChanged(_ sender: Any) {
         let slider = sender as! UISlider
         let value = CGFloat(slider.value)
         let r: CGFloat
@@ -55,37 +53,37 @@ class NewTodoListViewController: UIViewController {
         
         switch Int(value) {
         case 1:
-            r = value - CGFloat(Int(value))
-            g = 0
-            b = 0
-        case 2:
             r = 1
-            g = 0
-            b = value - CGFloat(Int(value))
-        case 3:
-            r = abs(CGFloat(Int(value)+1) - value)
-            g = 0
-            b = 1
-        case 4:
-            r = 0
-            g = value - CGFloat(Int(value))
-            b = 1
-        case 5:
-            r = 0
             g = 1
             b = abs(CGFloat(Int(value)+1) - value)
-        case 6:
-            r = value - CGFloat(Int(value))
+        case 2:
+            r = abs(CGFloat(Int(value)+1) - value)
             g = 1
             b = 0
-        case 7:
-            r = 1
+        case 3:
+            r = 0
             g = 1
             b = value - CGFloat(Int(value))
-        default:
-            r = 1
-            g = 1
+        case 4:
+            r = 0
+            g = abs(CGFloat(Int(value)+1) - value)
             b = 1
+        case 5:
+            r = value - CGFloat(Int(value))
+            g = 0
+            b = 1
+        case 6:
+            r = 1
+            g = 0
+            b = abs(CGFloat(Int(value)+1) - value)
+        case 7:
+            r = abs(CGFloat(Int(value)+1) - value)
+            g = 0
+            b = 0
+        default:
+            r = 0
+            b = 0
+            g = 0
         }
         
         colorImageView.backgroundColor = UIColor(red: r, green: g, blue: b, alpha: 1.0)
