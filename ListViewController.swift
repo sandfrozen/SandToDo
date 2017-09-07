@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TodoListViewController: UIViewController {
+class ListViewController: UIViewController {
     
     var todos = [Todo]()
 

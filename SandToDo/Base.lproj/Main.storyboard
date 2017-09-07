@@ -75,7 +75,7 @@
         <!--New List-->
         <scene sceneID="uye-80-SjM">
             <objects>
-                <viewController id="z7n-sM-qZl" customClass="NewTodoListViewController" customModule="SandToDo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="z7n-sM-qZl" customClass="NewListViewController" customModule="SandToDo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bfk-93-E16"/>
                         <viewControllerLayoutGuide type="bottom" id="NTc-TU-OJu"/>
@@ -204,7 +204,7 @@
         <!--Todo List-->
         <scene sceneID="ocv-ja-tUJ">
             <objects>
-                <viewController id="cOB-sF-Syw" customClass="TodoListViewController" customModule="SandToDo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="cOB-sF-Syw" customClass="ListViewController" customModule="SandToDo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Glf-er-2vb"/>
                         <viewControllerLayoutGuide type="bottom" id="UEn-ye-91u"/>

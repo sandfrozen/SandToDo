@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewTodoListViewController: UIViewController, UITextFieldDelegate {
+class NewListViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: - Properties
     @IBOutlet weak var nameTextField: UITextField!

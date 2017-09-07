@@ -14,8 +14,8 @@
 		E9471E131F5D6BFE00A53EBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9471E111F5D6BFE00A53EBE /* LaunchScreen.storyboard */; };
 		E9471E1B1F5D6E4600A53EBE /* CoreDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9471E1A1F5D6E4600A53EBE /* CoreDataController.swift */; };
 		E9471E331F5D7D9800A53EBE /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9471E321F5D7D9800A53EBE /* ListTableViewController.swift */; };
-		E9471E371F5D83B900A53EBE /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9471E361F5D83B900A53EBE /* TodoListViewController.swift */; };
-		E9471E391F5DA59C00A53EBE /* NewTodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9471E381F5DA59C00A53EBE /* NewTodoListViewController.swift */; };
+		E9471E371F5D83B900A53EBE /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9471E361F5D83B900A53EBE /* ListViewController.swift */; };
+		E9471E391F5DA59C00A53EBE /* NewListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9471E381F5DA59C00A53EBE /* NewListViewController.swift */; };
 		E9D806961F6193B0005872C5 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D806951F6193B0005872C5 /* ListTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,8 +29,8 @@
 		E9471E141F5D6BFE00A53EBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9471E1A1F5D6E4600A53EBE /* CoreDataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataController.swift; sourceTree = "<group>"; };
 		E9471E321F5D7D9800A53EBE /* ListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
-		E9471E361F5D83B900A53EBE /* TodoListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TodoListViewController.swift; path = ../TodoListViewController.swift; sourceTree = "<group>"; };
-		E9471E381F5DA59C00A53EBE /* NewTodoListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewTodoListViewController.swift; sourceTree = "<group>"; };
+		E9471E361F5D83B900A53EBE /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListViewController.swift; path = ../ListViewController.swift; sourceTree = "<group>"; };
+		E9471E381F5DA59C00A53EBE /* NewListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewListViewController.swift; sourceTree = "<group>"; };
 		E9D806951F6193B0005872C5 /* ListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,8 +90,8 @@
 			children = (
 				E9471E1A1F5D6E4600A53EBE /* CoreDataController.swift */,
 				E9471E321F5D7D9800A53EBE /* ListTableViewController.swift */,
-				E9471E361F5D83B900A53EBE /* TodoListViewController.swift */,
-				E9471E381F5DA59C00A53EBE /* NewTodoListViewController.swift */,
+				E9471E361F5D83B900A53EBE /* ListViewController.swift */,
+				E9471E381F5DA59C00A53EBE /* NewListViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -174,8 +174,8 @@
 				E9471E1B1F5D6E4600A53EBE /* CoreDataController.swift in Sources */,
 				E9471E331F5D7D9800A53EBE /* ListTableViewController.swift in Sources */,
 				E9471E061F5D6BFE00A53EBE /* AppDelegate.swift in Sources */,
-				E9471E371F5D83B900A53EBE /* TodoListViewController.swift in Sources */,
-				E9471E391F5DA59C00A53EBE /* NewTodoListViewController.swift in Sources */,
+				E9471E371F5D83B900A53EBE /* ListViewController.swift in Sources */,
+				E9471E391F5DA59C00A53EBE /* NewListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
