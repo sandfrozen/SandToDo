@@ -105,7 +105,7 @@ class NewTodoListViewController: UIViewController, UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
-    
+
     func textFieldDidEndEditing(_ textField: UITextField) {
         nameTextField.text = textField.text
     }
