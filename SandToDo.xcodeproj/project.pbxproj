@@ -13,7 +13,7 @@
 		E9471E101F5D6BFE00A53EBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9471E0F1F5D6BFE00A53EBE /* Assets.xcassets */; };
 		E9471E131F5D6BFE00A53EBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9471E111F5D6BFE00A53EBE /* LaunchScreen.storyboard */; };
 		E9471E1B1F5D6E4600A53EBE /* CoreDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9471E1A1F5D6E4600A53EBE /* CoreDataController.swift */; };
-		E9471E331F5D7D9800A53EBE /* ListsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9471E321F5D7D9800A53EBE /* ListsTableViewController.swift */; };
+		E9471E331F5D7D9800A53EBE /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9471E321F5D7D9800A53EBE /* ListTableViewController.swift */; };
 		E9471E371F5D83B900A53EBE /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9471E361F5D83B900A53EBE /* TodoListViewController.swift */; };
 		E9471E391F5DA59C00A53EBE /* NewTodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9471E381F5DA59C00A53EBE /* NewTodoListViewController.swift */; };
 		E9D806961F6193B0005872C5 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D806951F6193B0005872C5 /* ListTableViewCell.swift */; };
@@ -28,7 +28,7 @@
 		E9471E121F5D6BFE00A53EBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E9471E141F5D6BFE00A53EBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9471E1A1F5D6E4600A53EBE /* CoreDataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataController.swift; sourceTree = "<group>"; };
-		E9471E321F5D7D9800A53EBE /* ListsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListsTableViewController.swift; sourceTree = "<group>"; };
+		E9471E321F5D7D9800A53EBE /* ListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
 		E9471E361F5D83B900A53EBE /* TodoListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TodoListViewController.swift; path = ../TodoListViewController.swift; sourceTree = "<group>"; };
 		E9471E381F5DA59C00A53EBE /* NewTodoListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewTodoListViewController.swift; sourceTree = "<group>"; };
 		E9D806951F6193B0005872C5 /* ListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
@@ -89,7 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				E9471E1A1F5D6E4600A53EBE /* CoreDataController.swift */,
-				E9471E321F5D7D9800A53EBE /* ListsTableViewController.swift */,
+				E9471E321F5D7D9800A53EBE /* ListTableViewController.swift */,
 				E9471E361F5D83B900A53EBE /* TodoListViewController.swift */,
 				E9471E381F5DA59C00A53EBE /* NewTodoListViewController.swift */,
 			);
@@ -172,7 +172,7 @@
 				E9D806961F6193B0005872C5 /* ListTableViewCell.swift in Sources */,
 				E9471E0E1F5D6BFE00A53EBE /* SandToDo.xcdatamodeld in Sources */,
 				E9471E1B1F5D6E4600A53EBE /* CoreDataController.swift in Sources */,
-				E9471E331F5D7D9800A53EBE /* ListsTableViewController.swift in Sources */,
+				E9471E331F5D7D9800A53EBE /* ListTableViewController.swift in Sources */,
 				E9471E061F5D6BFE00A53EBE /* AppDelegate.swift in Sources */,
 				E9471E371F5D83B900A53EBE /* TodoListViewController.swift in Sources */,
 				E9471E391F5DA59C00A53EBE /* NewTodoListViewController.swift in Sources */,

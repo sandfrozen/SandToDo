@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ListsTableViewController: UITableViewController {
+class ListTableViewController: UITableViewController {
     
     var lists = [List]()
 

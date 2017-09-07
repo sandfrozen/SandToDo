@@ -10,6 +10,11 @@ import UIKit
 
 class ListTableViewCell: UITableViewCell {
 
+    // MARK: - Propertries
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var colorImageView: UIImageView!
+    @IBOutlet weak var countLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
